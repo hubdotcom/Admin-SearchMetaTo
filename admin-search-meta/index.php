@@ -4,13 +4,13 @@ Plugin Name: Admin SearchMetaTo
 Plugin URI: http://www.t31os.co.cc/
 Description: Extends the posts management search to also check against meta data.
 Author: t31os
-Version: 1.0
+Version: 1.0.1
 Author URI: http://www.t31os.co.cc/
 */
  
 class post_searches_meta {
        
-        function post_searches_meta() {
+        function __construct() {
                 add_filter( 'posts_where' , array( $this , 'where' ) );
                 add_filter( 'posts_join' , array( $this , 'join' ) );
                 add_filter( 'posts_groupby' , array( $this , 'group' ) );
